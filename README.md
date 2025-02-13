@@ -1,5 +1,26 @@
 # Kubernetes  
 
+## Project Overview  
+
+This project sets up a lightweight Kubernetes cluster using Vagrant and VirtualBox. It provisions:  
+
+- **One master node** (`k8s-master`) that manages the cluster  
+- **Two worker nodes** (`k8s-worker-1`, `k8s-worker-2`) that run containerized workloads  
+- **An embedded ETCD cluster** running on the master node for storing Kubernetes cluster data  
+
+All virtual machines have the necessary dependencies installed, including:  
+- Docker container runtime  
+- Kubernetes components (`kubeadm`, `kubectl`, `kubelet`)  
+- Network configurations and optimizations  
+- ETCD, which is configured using the following configuration file:  
+  ```sh
+  /etc/kubernetes/pki/etcd/ca.crt
+  /etc/kubernetes/pki/etcd/server.crt
+  /etc/kubernetes/pki/etcd/server.key
+  ```
+
+The master node is initialized with `kubeadm`, and Flannel is deployed as the pod network. Worker nodes are automatically configured to join the cluster.  
+
 ## Getting Started  
 
 To set up this Kubernetes project locally, first, clone the repository:  
