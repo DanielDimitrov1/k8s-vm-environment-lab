@@ -1,5 +1,20 @@
 # Kubernetes  
 
+## Getting Started  
+
+To set up this Kubernetes project locally, first, clone the repository:  
+```sh
+git clone https://github.com/DanielDimitrov1/Kubernetes_project.git
+```  
+
+Navigate to the project directory and start the virtual machines using Vagrant:  
+```sh
+cd Kubernetes_project
+vagrant up
+```  
+
+Once the setup is complete, follow the steps below to configure the cluster.  
+
 ## Setup Instructions  
 
 ### Joining Worker Nodes to the Cluster  
