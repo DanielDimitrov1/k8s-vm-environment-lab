@@ -25,12 +25,12 @@ The master node is initialized with `kubeadm`, and Flannel is deployed as the po
 
 To set up this Kubernetes project locally, first, clone the repository:  
 ```sh
-git clone https://github.com/DanielDimitrov1/Kubernetes_project.git
+git clone https://github.com/DanielDimitrov1/k8s-vm-environment-lab.git
 ```  
 
 Navigate to the project directory and start the virtual machines using Vagrant:  
 ```sh
-cd Kubernetes_project
+cd k8s-vm-environment-lab
 vagrant up
 ```  
 
